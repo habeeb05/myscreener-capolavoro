@@ -1,0 +1,161 @@
+/* Tema nero con colori azzurrini */
+:root {
+  --main-bg-color: #1e1e1e;
+  --main-text-color: #e0e0e0;
+  --secondary-text-color: #80d4ff;
+  --navbar-bg-color: #252525;
+  --button-bg-color: #3a3a3a;
+  --button-text-color: #80d4ff;
+  --toggle-bg-color: #3a3a3a;
+  --toggle-btn-color: #80d4ff;
+  --positive-change-color: #4caf50;
+  --negative-change-color: #f44336;
+}
+
+body {
+  background: linear-gradient(135deg, #535353, #141414);
+}
+
+.main_container {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #4c1199af, #3a3a3a);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+h1 {
+  color: var(--secondary-text-color);
+}
+
+.white_btn {
+  background: linear-gradient(135deg, #b4b4b4, #7a6c6c);
+  color: var(--button-text-color);
+  border: none;
+  padding: 0px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 16px;
+}
+
+.white_btn:hover {
+  background: linear-gradient(135deg, #80d4ff, #00bfff);
+  color: var(--main-bg-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_info {
+  margin: 20px 0;
+  background: linear-gradient(135deg, #4e65cc, #3a3a3a);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.toggle_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Sposta gli elementi agli estremi */
+  margin: 20px 0;
+  background: linear-gradient(-135deg, #129fe0, #3a3a3a);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.toggle_content {
+  flex: 1; /* Occupa tutto lo spazio disponibile */
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px; /* Spazio tra testo e toggle */
+}
+
+.toggle_content p {
+  margin: 0; /* Rimuovi margine dai paragrafi */
+}
+
+.crypto_table_container {
+  background: linear-gradient(135deg, #252525, #3a3a3a);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.crypto_table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--main-text-color);
+}
+
+.crypto_table th,
+.crypto_table td {
+  border: 1px solid var(--main-text-color);
+  padding: 10px;
+  text-align: center;
+}
+
+.crypto_table th {
+  background-color: var(--main-bg-color);
+}
+
+.crypto_table td {
+  background-color: var(--navbar-bg-color);
+}
+
+.positive_change {
+  color: var(--positive-change-color);
+}
+
+.negative_change {
+  color: var(--negative-change-color);
+}
+
+/* Stile dello switch */
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background: var(--toggle-bg-color);
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.react-switch-label .react-switch-button {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 26px;
+  transition: 0.2s;
+  background: var(--toggle-btn-color);
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.react-switch-label:active .react-switch-button {
+  width: 34px;
+}

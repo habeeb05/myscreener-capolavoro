@@ -1,0 +1,54 @@
+### Ottenere tutti gli utenti
+GET http://localhost:3000/signup
+
+### Ottenere un singolo utente per _id
+GET http://localhost:3000/signup/660e3813ac2840c081652cb6
+
+### ricerca utente eliminato 
+GET http://localhost:3000/signup/6616c39f931b6bc8d871e5d6
+
+### Creare un nuovo utente
+POST http://localhost:3000/signup/
+Content-Type: application/json
+
+{
+    "firstName": "prova1",
+    "lastName": "prova1",
+    "email": "prova4@prova.com",
+    "password": "prova4"
+}
+
+### Aggiornare un utente
+PATCH http://localhost:3000/signup/6615a1cd3b7805cc7a308740
+Content-Type: application/json
+
+{
+    "firstName": "Nomeato",
+    "lastName": "Cognoornato"
+}
+
+### Eliminare un utente per _id
+DELETE http://localhost:3000/signup/660e3813ac2840c081652cb6
+
+### richiesta
+GET http://localhost:3000/getToken
+
+### TEST ERRORI
+### passando una cagata
+GET http://localhost:3000/signup/66159dc35267f6c4d46a2a18/akjsdnasd
+
+### passando un id non esistente
+GET http://localhost:3000/signup/66159dc35267f6c4d46a2a18
+
+### passando un id con formato sbagliato
+GET http://localhost:3000/signup/66159dc35267f6c4d46a2a18akjsdnasd
+
+### update user passando un id non esistente
+PATCH http://localhost:3000/signup/6615a0f22b66f5f6b79b4221
+Content-Type: application/json
+
+{
+    "firstName": "NomeAggiornato",
+    "lastName": "CognomeAggiornato"
+}
+
